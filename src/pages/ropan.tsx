@@ -73,7 +73,7 @@ const Ropaniño : React.FC<Props> = ({products}) => {
       as={motion.div}
       alignItems={'center'}
       key={'backdrop'}
-      onClick={()=> setselectedImage (null)}
+      onClick={()=> setselectedImage(null)}
       >
         
           <Image height={'100%'}  key={'image'} src={selectedImage}/>
