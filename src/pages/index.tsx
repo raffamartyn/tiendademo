@@ -15,7 +15,7 @@ interface Props{
 }
 
 const IndexRoute : React.FC<Props> = ({products}) => {
-  const [selectedImage, setselectedImage] = React.useState <string> (null);
+  const [selectedImage, setselectedImage] = React.useState <string | null> (null);
   return (
   
     <Layout>
@@ -36,7 +36,7 @@ const IndexRoute : React.FC<Props> = ({products}) => {
          <Image
          as={motion.img}
          cursor={"pointer"}
-         layoutId={product.LINk }
+         layoutId={product.LINK}
          onClick={()=> setselectedImage(product.LINK)}
          src={product.LINK} maxHeight={170} objectFit='cover' alt=""/>
       <Text color={'black.500'}>{product.ROPAN}</Text>

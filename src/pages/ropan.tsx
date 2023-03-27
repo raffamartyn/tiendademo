@@ -16,7 +16,7 @@ interface Props{
 }
 
 const Ropaniño : React.FC<Props> = ({products}) => {
-  const [selectedImage, setselectedImage] = React.useState <string> (null);
+  const [selectedImage, setselectedImage] = React.useState <string | null> (null);
   const handleComprar = (product: Product) => {
     const message = `¡Hola! Me interesa comprar el producto ${product.ROPAN}, con un precio de ${product.PRECION}.`;
     const url = `https://wa.me/3875679936/?text=${encodeURIComponent(message)}`;
@@ -42,7 +42,7 @@ const Ropaniño : React.FC<Props> = ({products}) => {
          <Image
          as={motion.img}
          cursor={"pointer"}
-         layoutId={product.LINk }
+         layoutId={product.LINK}
          onClick={()=> setselectedImage(product.LINK)}
          src={product.LINK} maxHeight={170} objectFit='cover' alt=""/>
       <Text color={'black.500'}>{product.ROPAN}</Text>

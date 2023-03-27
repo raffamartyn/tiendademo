@@ -14,7 +14,7 @@ interface Props{
 }
 
 const Ropadama: React.FC<Props> = ({ropad}) => {
-  const [selectedImage, setselectedImage] = React.useState <string> (null);
+  const [selectedImage, setselectedImage] = React.useState <string | null> (null);
   const handleComprar = (product: Productd) => {
     const message = `¡Hola! Me interesa comprar el producto ${product.ROPAD}, con un precio de ${product.PRECIOD}.`;
     const url = `https://wa.me/3875057208/?text=${encodeURIComponent(message)}`;

@@ -16,7 +16,7 @@ interface Props{
 }
 
 const Ropacaba: React.FC<Props> = ({ropac}) => {
-  const [selectedImage, setselectedImage] = React.useState <string> (null);
+  const [selectedImage, setselectedImage] = React.useState <string | null> (null);
   const Textw = "hola me interesa este producto ${product.ROPAC} gracias";
   return (
   
